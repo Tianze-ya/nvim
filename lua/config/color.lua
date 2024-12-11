@@ -1,0 +1,1 @@
+vim.option.termguicolors = true
