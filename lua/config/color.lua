@@ -1,1 +1,1 @@
-vim.option.termguicolors = true
+vim.opt.termguicolors = true
