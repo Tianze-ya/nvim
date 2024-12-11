@@ -28,7 +28,7 @@ opt.undodir = vim.fn.expand("~/.config/nvim/tmp/undo")
 
 opt.updatetime = 50
 
-vim.buffer.fileencoding = "utf-8"
+vim.b.fileencoding = "utf-8"
 
 opt.wildmenu = true
 opt.hlsearch = false
