@@ -1,3 +1,4 @@
 require("config.core")
-require("config.keymaps.keymap")
---require("config.plugin.lazy")
+require("config.color")
+require("config.keymap")
+require("config.plugins")
