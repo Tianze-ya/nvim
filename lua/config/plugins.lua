@@ -19,7 +19,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     spec = {
         require("config.plugins.fun"),
-        require("config.plugins.telescope"),
+        require("config.plugins.telescope").config,
         require("config.plugins.mason"),
         require("config.plugins.autocomplete").config,
         require("config.plugins.debugger"),
