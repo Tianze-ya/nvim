@@ -123,7 +123,6 @@ M.config = {
 
             require("config.plugins.lsp.lua").setup(lspconfig, lsp)
             require("config.plugins.lsp.json").setup(lspconfig, lsp)
-            require("config.plugins.lsp.flutter").setup(lsp)
             require("config.plugins.lsp.html").setup(lspconfig, lsp)
 
             require 'lspconfig'.html.setup {}
