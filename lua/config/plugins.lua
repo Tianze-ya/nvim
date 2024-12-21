@@ -19,6 +19,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     spec = {
         require("config.plugins.fun"),
+        require("config.plugins.neoclip"),
         require("config.plugins.telescope").config,
     },
     checker = { enabled = true },
