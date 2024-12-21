@@ -4,8 +4,6 @@ local M = {}
 M.config = {
 	{
 		"nvim-telescope/telescope.nvim",
-		-- dir = "/Users/david/.config/nvim/_local_plugins/telescope.nvim",
-		-- tag = '0.1.1',
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 			"nvim-lua/plenary.nvim",
@@ -19,16 +17,12 @@ M.config = {
 				end
 			},
 			{ 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
-			-- "nvim-telescope/telescope-ui-select.nvim",
 			'stevearc/dressing.nvim',
 			'dimaportenko/telescope-simulators.nvim',
 		},
 		config = function()
 			local builtin = require('telescope.builtin')
 			vim.keymap.set('n', '<c-p>', builtin.find_files, m)
-			-- vim.keymap.set('n', '<c-f>', function()
-			-- 	builtin.grep_string({ search = "" })
-			-- end, m)
 			vim.keymap.set('n', '<leader>rs', builtin.resume, m)
 			vim.keymap.set('n', '<c-w>', builtin.buffers, m)
 			vim.keymap.set('n', '<c-h>', builtin.oldfiles, m)
@@ -66,10 +60,9 @@ M.config = {
 				W = 2,
 				WARN = 2
 			}
-			-- vim.keymap.set('n', 'gd', builtin.lsp_definitions, m)
-			-- vim.keymap.set('n', '<c-t>', builtin.lsp_document_symbols, {})
+
 			vim.keymap.set('n', 'gi', builtin.git_status, m)
-			vim.keymap.set("n", ":", builtin.commands, m)
+			vim.keymap.set("n", ";", builtin.commands, m)
 
 			local trouble = require("trouble.providers.telescope")
 
@@ -161,14 +154,9 @@ M.config = {
 			require("simulators").setup({
 				android_emulator = false,
 				apple_simulator = true,
-			})
-			-- ts.load_extension("ui-select")
+            })
+			
 			ts.load_extension("flutter")
-			local tsdap = ts.extensions.dap;
-			-- vim.keymap.set("n", "<leader>'v", tsdap.variables, m)
-			-- vim.keymap.set("n", "<leader>'a", tsdap.commands, m)
-			-- vim.keymap.set("n", "<leader>'b", tsdap.list_breakpoints, m)
-			-- vim.keymap.set("n", "<leader>'f", tsdap.frames, m)
 		end
 	},
 	{
