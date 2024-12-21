@@ -14,7 +14,7 @@ return {
                     telescope = {
                         i = {
                             select = '<c-y>',
-                            paste = '<cr>',
+                            paste = '<c-r>',
                             paste_behind = '<c-g>',
                             replay = '<c-q>', -- replay a macro
                             delete = '<c-d>', -- delete an entry

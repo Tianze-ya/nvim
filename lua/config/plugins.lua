@@ -18,10 +18,17 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 require("lazy").setup({
     spec = {
+        require("config.plugins.notify"),
         require("config.plugins.fzf"),
         require("config.plugins.neoclip"),
         require("config.plugins.telescope"),
+        require("config.plugins.tex"),
+        require("config.plugins.wilder"),
+        require("config.plugins.dropbar"),
+        require("config.plugins.lualine"),
+        require("config.plugins.bufferline"),
         require("config.plugins.fun"),
+        { "dstein64/vim-startuptime" },
     },
     checker = { enabled = true },
 })

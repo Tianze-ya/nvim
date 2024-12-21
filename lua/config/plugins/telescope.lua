@@ -24,13 +24,7 @@ return {
             vim.keymap.set('n', '<c-p>', builtin.find_files, m)
             vim.keymap.set('n', '<leader>rs', builtin.resume, m)
             vim.keymap.set('n', '<c-w>', builtin.buffers, m)
-            vim.keymap.set('n', '<c-h>', builtin.oldfiles, m)
             vim.keymap.set('n', '<c-_>', builtin.current_buffer_fuzzy_find, m)
-            vim.keymap.set('n', '<leader>d', function()
-                builtin.diagnostics({
-                    sort_by = "severity"
-                })
-            end, m)
             vim.keymap.set('n', 'gi', builtin.git_status, m)
             vim.keymap.set("n", ";", builtin.commands, m)
 
@@ -61,7 +55,7 @@ return {
 
             local ts = require('telescope')
             local actions = require('telescope.actions')
-            
+
             ts.setup({
                 defaults = {
                     file_ignore_patterns = {
