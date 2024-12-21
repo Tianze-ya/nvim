@@ -20,7 +20,7 @@ require("lazy").setup({
     spec = {
         require("config.plugins.fzf"),
         require("config.plugins.neoclip"),
-        require("config.plugins.telescope").config,
+        require("config.plugins.telescope"),
         require("config.plugins.fun"),
     },
     checker = { enabled = true },
